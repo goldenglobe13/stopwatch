@@ -1,10 +1,10 @@
 import "./App.css";
-import AnalogClock from "./components/analogClock";
+import StopWatch from "./components/StopWatch";
 
 function App() {
   return (
     <div>
-      <AnalogClock />
+      <StopWatch />
     </div>
   );
 }
