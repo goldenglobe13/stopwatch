@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .bigContainer {
   text-align: center;
   width: 80%;
@@ -118,13 +124,16 @@ ul {
   margin: 0.5rem auto;
   text-align: center;
   width: 90%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 4fr;
+  grid-template-rows: 2rem;
   align-items: center;
-  gap: 10%;
+  justify-items: center;
+  justify-content: space-around;
 }
 
 .listContainer div {
-  width: 25%;
+  width: 40%;
 }
 
 .listContainer div:last-child {
@@ -179,4 +188,40 @@ ul {
 
 .listTrans-exit-done {
   transform: translateX(120%);
+}
+
+@media (max-width: 32em) {
+  .bigContainer {
+    width: 90%;
+    margin: 0.2rem auto;
+    border-radius: 1rem;
+    padding: 0.2rem;
+  }
+  .listContainer {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    margin: 0.2rem auto;
+    text-align: center;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 2.2rem 0.6rem;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+  }
+  .timeStamps div:last-child {
+    width: 95%;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/-1;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .listContainer.labels {
+    grid-template-rows: 2.2rem 0rem;
+  }
+  .labels div:last-child {
+    display: none;
+  }
 }

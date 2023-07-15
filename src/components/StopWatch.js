@@ -3,7 +3,7 @@ import "./StopWatch.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 let timesObj = [];
-let listClassAnimation = "listContainer";
+let listClassAnimation = "listContainer timeStamps";
 
 const defaultTimer = (
   <>
@@ -190,9 +190,9 @@ const StopWatch = () => {
     dispatch({
       type: "timer/sort",
     });
-    listClassAnimation = "listContainer flip";
+    listClassAnimation = "listContainer timeStamps flip";
     setTimeout(() => {
-      listClassAnimation = "listContainer";
+      listClassAnimation = "listContainer timeStamps";
     }, 700);
   }
 
@@ -267,7 +267,7 @@ const StopWatch = () => {
             onChange={sortHandler}
           />
           <label htmlFor="sort">Reverse order</label>
-          <li className="listContainer">
+          <li className="listContainer labels">
             <div>Label</div>
             <div>Interval</div>
             <div>Total</div>
