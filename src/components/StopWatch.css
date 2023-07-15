@@ -215,8 +215,9 @@ ul {
     align-self: center;
     justify-self: center;
     grid-column: 1/-1;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
+    color: #333;
   }
   .listContainer.labels {
     grid-template-rows: 2.2rem 0rem;
